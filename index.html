@@ -16,7 +16,7 @@
         }
         /* ヘッダー */
         header {
-            background-color: #6b4d9a; /* あじさいをイメージしたパープルカラー */
+            background-color: #6b4d9a;
             color: white;
             padding: 2.5rem 1rem;
             text-align: center;
@@ -42,7 +42,7 @@
             z-index: 100;
         }
         nav a {
-            margin: 0 12px;
+            margin: 0 10px;
             text-decoration: none;
             color: #6b4d9a;
             font-weight: bold;
@@ -54,7 +54,7 @@
             margin: 30px auto;
             padding: 0 20px;
         }
-        /* セクションスタイル */
+        /* セクション */
         section {
             background: white;
             padding: 30px;
@@ -74,8 +74,9 @@
             padding: 20px;
             border-radius: 8px;
             font-size: 0.98rem;
-            white-space: pre-line; /* 改行をそのまま反映 */
+            white-space: pre-line;
         }
+        /* 案内ボックス */
         .info-box {
             background: #fff8eb;
             padding: 20px;
@@ -83,10 +84,45 @@
             border: 1px dashed #e69c24;
         }
         .info-item {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
         }
-        .info-item:last-child {
-            margin-bottom: 0;
+        .next-date {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .price-list {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px solid #ffe0b2;
+        }
+        .notice {
+            color: #00838f;
+            font-weight: bold;
+            background: #e0f7fa;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        /* レスポンシブマップ */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         /* ボタン */
         .btn {
@@ -98,10 +134,14 @@
             border-radius: 25px;
             font-weight: bold;
             margin-top: 15px;
-            transition: background 0.3s;
         }
-        .btn:hover {
-            background: #53397d;
+        .sponsor-box {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.95rem;
+            margin-top: 20px;
         }
         /* フッター */
         footer {
@@ -123,6 +163,7 @@
 <nav>
     <a href="#philosophy">理念・思い</a>
     <a href="#schedule">開催案内</a>
+    <a href="#access">場所・マップ</a>
     <a href="#contact">お問い合わせ</a>
 </nav>
 
@@ -144,19 +185,51 @@
     <section id="schedule">
         <h2>次回の開催予定</h2>
         <div class="info-box">
-            <div class="info-item"><strong>📅 日時：</strong> 次回開催日が入ります（例：毎月第〇土曜日 12:00〜）</div>
-            <div class="info-item"><strong>📍 場所：</strong> 開催場所の住所や施設名</div>
-            <div class="info-item"><strong>💰 参加費：</strong> 子ども：無料 / 大人：〇〇円</div>
-            <div class="info-item"><strong>🍲 対象：</strong> 地域のお子様、ご高齢の方、保護者の皆様</div>
+            <div class="info-item">
+                <strong>📅 次回の開催日：</strong><br>
+                <span class="next-date" id="next-sunday">計算中...</span>（毎月第4日曜日）
+            </div>
+            
+            <div class="info-item">
+                <strong>🍱 メニュー・料金：</strong>
+                <div class="price-list">
+                    ・熱アツカレー： <strong>400円</strong><br>
+                    ・最高味噌汁セット： <strong>300円</strong><br>
+                    ・子供肩もみ（10分）： <strong>100円</strong>
+                </div>
+            </div>
+
+            <div class="notice">
+                ※ごみゼロ運動推進の為、お持ち帰り容器（鍋・タッパ等）を持参下さい※
+            </div>
         </div>
     </section>
 
-    <!-- お問い合わせ・ご支援 -->
+    <!-- 場所・マップ -->
+    <section id="access">
+        <h2>開催場所・アクセス</h2>
+        <p><strong>📍 住所：</strong> 〒862-0903 熊本県熊本市東区若葉1丁目7-6（食パン家向い）</p>
+        
+        <!-- Google Map 埋め込み（スマホでも綺麗に自動調整） -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.66110468049843!2d130.75979767410084!3d32.77693891967736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f367edcd9bb3%3A0xab8530a34cca8a4c!2z6Jit!5e0!3m2!1sja!2sjp!4v1785942268754!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </section>
+
+    <!-- お問い合わせ・協賛 -->
     <section id="contact">
-        <h2>ご参加・ご支援・お問い合わせ</h2>
-        <p>あじさい食堂へのご参加予約、ボランティアのご参加、食材のご寄付などに関するお問い合わせは、下記よりお気軽にご連絡ください。</p>
-        <p>日本の宝である子どもたちの未来のために、皆様のご賛同・ご協力を心よりお願い申し上げます。</p>
-        <a href="mailto:your-email@example.com" class="btn">メールでお問い合わせ</a>
+        <h2>お問い合わせ・ご協賛</h2>
+        <p>あじさい食堂へのご参加、お手伝い、ご質問などお気軽にご連絡ください。</p>
+        
+        <p><strong>📞 問い合わせ先：</strong> 岡村 泰治<br>
+        <strong>TEL：</strong> <a href="tel:09066371358" style="color:#6b4d9a; font-weight:bold;">090-6637-1358</a></p>
+
+        <a href="tel:09066371358" class="btn">電話をかける</a>
+
+        <div class="sponsor-box">
+            <strong>【 協賛 】</strong><br>
+            （株）SCM 有志の皆様 ／ 上地流空手道連盟
+        </div>
     </section>
 
 </div>
@@ -164,6 +237,43 @@
 <footer>
     &copy; あじさい食堂 All Rights Reserved.
 </footer>
+
+<!-- 毎月第4日曜日を自動計算するJavaScript -->
+<script>
+function getNext4thSunday() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // 時間をリセット
+
+    let year = today.getFullYear();
+    let month = today.getMonth();
+
+    // 今月と来月以降の第4日曜日を調べる
+    for (let i = 0; i < 12; i++) {
+        let targetMonth = month + i;
+        let targetYear = year + Math.floor(targetMonth / 12);
+        targetMonth = targetMonth % 12;
+
+        let sundayCount = 0;
+        // 月の1日から順番に日曜日を探す
+        for (let day = 1; day <= 31; day++) {
+            let date = new Date(targetYear, targetMonth, day);
+            if (date.getMonth() !== targetMonth) break; // 月が変わったら終了
+            
+            if (date.getDay() === 0) { // 日曜日の場合
+                sundayCount++;
+                if (sundayCount === 4) { // 第4日曜日
+                    if (date >= today) { // 今日以降の日付ならそれを返す
+                        return `${targetYear}年${targetMonth + 1}月${day}日（日）`;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 画面が表示されたら自動で日付を書き換える
+document.getElementById('next-sunday').innerText = getNext4thSunday();
+</script>
 
 </body>
 </html>
