@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あじさい食堂 | 地域で作る家族団らんと世代間交流の場</title>
+    <title>あじさい食堂 | 地域で作る家族団らんと心の交流</title>
     <style>
         /* 基本設定 */
         body {
@@ -42,11 +42,11 @@
             z-index: 100;
         }
         nav a {
-            margin: 0 10px;
+            margin: 0 8px;
             text-decoration: none;
             color: #6b4d9a;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         /* コンテナ */
         .container {
@@ -82,9 +82,18 @@
             padding: 20px;
             border-radius: 8px;
             border: 1px dashed #e69c24;
+            margin-bottom: 20px;
+        }
+        .info-box.clean {
+            background: #e8f5e9;
+            border-color: #4caf50;
+        }
+        .info-box.bujutsu {
+            background: #e3f2fd;
+            border-color: #2196f3;
         }
         .info-item {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 1.05rem;
         }
         .next-date {
@@ -107,10 +116,21 @@
             border-radius: 6px;
             margin-top: 15px;
         }
+        /* バナー・チラシ表示エリア */
+        .flyer-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .flyer-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
         /* レスポンシブマップ */
         .map-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 8px;
@@ -162,9 +182,10 @@
 
 <nav>
     <a href="#philosophy">理念・思い</a>
-    <a href="#schedule">開催案内</a>
-    <a href="#access">場所・マップ</a>
-    <a href="#contact">お問い合わせ</a>
+    <a href="#schedule">あじさい食堂</a>
+    <a href="#clean">クリーン大作戦</a>
+    <a href="#bujutsu">武術・護身術・整体</a>
+    <a href="#access">アクセス</a>
 </nav>
 
 <div class="container">
@@ -181,9 +202,16 @@
         </div>
     </section>
 
-    <!-- 開催案内 -->
+    <!-- 1. 子ども食堂 -->
     <section id="schedule">
-        <h2>次回の開催予定</h2>
+        <h2>🍲 あじさい食堂（次回開催）</h2>
+        
+        <!-- 自動で季節ごとに変わるチラシ表示エリア -->
+        <div class="flyer-container">
+            <img id="seasonal-flyer" src="" alt="季節のチラシ" class="flyer-img">
+            <p style="font-size:0.85rem; color:#666; margin-top:5px;" id="season-name"></p>
+        </div>
+
         <div class="info-box">
             <div class="info-item">
                 <strong>📅 次回の開催日：</strong><br>
@@ -205,12 +233,43 @@
         </div>
     </section>
 
+    <!-- 2. ローカルクリーン大作戦 -->
+    <section id="clean">
+        <h2>🧹 ローカルクリーン大作戦（ゴミ拾い活動）</h2>
+        <p>秋晴れ（または季節の青空）の下、みんなで運拾い！心も街もスッキリしましょう！！</p>
+        <div class="info-box clean">
+            <div class="info-item"><strong>主催：</strong> あじさい食堂</div>
+            <div class="info-item"><strong>時間：</strong> 7:30〜11:00（※小雨の時は延期）</div>
+            <div class="info-item"><strong>集合場所：</strong> 8町内公民館前</div>
+        </div>
+    </section>
+
+    <!-- 3. 武術体験・護身術・整体 -->
+    <section id="bujutsu">
+        <h2>🥋 武術体験講座・護身術・整体メンテナンス</h2>
+        <p><strong>〜自分を守る「技」と、自分をいたわる「術」〜</strong><br>
+        力より、理で動く。痛めるのではなく、整えながら強くなる。「自分を鍛えること」と「自分をいたわること」を同時に学びます。子どもから大人・高齢者の方まで安心してご参加いただけます。</p>
+        
+        <div class="info-box bujutsu">
+            <div class="info-item"><strong>主催：</strong> 武術点穴氣功教室（九州隆聖館 遊技門）</div>
+            <div class="info-item"><strong>日時：</strong> 18:30〜20:00（不定期水曜日・月2回）</div>
+            <div class="info-item"><strong>会場：</strong> 若葉コミュニティセンター（熊本市東区若葉4丁目23-23）</div>
+            <div class="info-item">
+                <strong>費用：</strong> 
+                <div class="price-list">
+                    ・武術体験講座（90分）： <strong>1,500円 / 回</strong><br>
+                    ・整体メンテナンス： <strong>1,500円 / 15分（1回）</strong>
+                </div>
+            </div>
+            <p style="font-size:0.9rem; color:#555;">※肩こり・腰痛・足腰の健康促進・自己肯定感の向上・心と体の育成を目指します。</p>
+        </div>
+    </section>
+
     <!-- 場所・マップ -->
     <section id="access">
-        <h2>開催場所・アクセス</h2>
+        <h2>開催場所・アクセス（あじさい食堂）</h2>
         <p><strong>📍 住所：</strong> 〒862-0903 熊本県熊本市東区若葉1丁目7-6（食パン家向い）</p>
         
-        <!-- Google Map 埋め込み（スマホでも綺麗に自動調整） -->
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.66110468049843!2d130.75979767410084!3d32.77693891967736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f367edcd9bb3%3A0xab8530a34cca8a4c!2z6Jit!5e0!3m2!1sja!2sjp!4v1785942268754!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
@@ -219,10 +278,11 @@
     <!-- お問い合わせ・協賛 -->
     <section id="contact">
         <h2>お問い合わせ・ご協賛</h2>
-        <p>あじさい食堂へのご参加、お手伝い、ご質問などお気軽にご連絡ください。</p>
+        <p>あじさい食堂、ゴミ拾い活動、武術教室へのお問い合わせはお電話にて受け付けております。</p>
         
-        <p><strong>📞 問い合わせ先：</strong> 岡村 泰治<br>
-        <strong>TEL：</strong> <a href="tel:09066371358" style="color:#6b4d9a; font-weight:bold;">090-6637-1358</a></p>
+        <p><strong>📞 担当：</strong> 岡村 泰治<br>
+        <strong>TEL：</strong> <a href="tel:09066371358" style="color:#6b4d9a; font-weight:bold;">090-6637-1358</a><br>
+        <span style="font-size:0.85rem; color:#666;">（受付時間 10:00〜19:30 ／ 迷惑電話防止のため留守電に一言メッセージをお願いします。折り返しお電話いたします）</span></p>
 
         <a href="tel:09066371358" class="btn">電話をかける</a>
 
@@ -238,31 +298,31 @@
     &copy; あじさい食堂 All Rights Reserved.
 </footer>
 
-<!-- 毎月第4日曜日を自動計算するJavaScript -->
+<!-- プログラム処理 -->
+<!-- プログラム処理 -->
 <script>
+// 1. 毎月第4日曜日を自動計算
 function getNext4thSunday() {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // 時間をリセット
+    today.setHours(0, 0, 0, 0);
 
     let year = today.getFullYear();
     let month = today.getMonth();
 
-    // 今月と来月以降の第4日曜日を調べる
     for (let i = 0; i < 12; i++) {
         let targetMonth = month + i;
         let targetYear = year + Math.floor(targetMonth / 12);
         targetMonth = targetMonth % 12;
 
         let sundayCount = 0;
-        // 月の1日から順番に日曜日を探す
         for (let day = 1; day <= 31; day++) {
             let date = new Date(targetYear, targetMonth, day);
-            if (date.getMonth() !== targetMonth) break; // 月が変わったら終了
+            if (date.getMonth() !== targetMonth) break;
             
-            if (date.getDay() === 0) { // 日曜日の場合
+            if (date.getDay() === 0) {
                 sundayCount++;
-                if (sundayCount === 4) { // 第4日曜日
-                    if (date >= today) { // 今日以降の日付ならそれを返す
+                if (sundayCount === 4) {
+                    if (date >= today) {
                         return `${targetYear}年${targetMonth + 1}月${day}日（日）`;
                     }
                 }
@@ -270,9 +330,19 @@ function getNext4thSunday() {
         }
     }
 }
-
-// 画面が表示されたら自動で日付を書き換える
 document.getElementById('next-sunday').innerText = getNext4thSunday();
+
+// 2. 毎月（1月〜12月）自動でチラシ画像を切り替える
+function updateMonthlyFlyer() {
+    const month = new Date().getMonth() + 1; // 今の月（1〜12）を取得
+    const flyerImg = document.getElementById('seasonal-flyer');
+    const seasonName = document.getElementById('season-name');
+
+    // 「flyer-1.jpg」「flyer-2.jpg」のように、月ごとの画像を表示
+    flyerImg.src = `flyer-${month}.jpg`;
+    seasonName.innerText = `📢 ${month}月のあじさい食堂 案内`;
+}
+updateMonthlyFlyer();
 </script>
 
 </body>
