@@ -299,7 +299,6 @@
 </footer>
 
 <!-- プログラム処理 -->
-<!-- プログラム処理 -->
 <script>
 // 1. 毎月第4日曜日を自動計算
 function getNext4thSunday() {
@@ -332,14 +331,14 @@ function getNext4thSunday() {
 }
 document.getElementById('next-sunday').innerText = getNext4thSunday();
 
-// 2. 毎月（1月〜12月）自動でチラシ画像を切り替える
+// 2. 「食堂チラシ」フォルダ内の画像を毎月自動切り替え
 function updateMonthlyFlyer() {
     const month = new Date().getMonth() + 1; // 今の月（1〜12）を取得
     const flyerImg = document.getElementById('seasonal-flyer');
     const seasonName = document.getElementById('season-name');
 
-    // 「flyer-1.jpg」「flyer-2.jpg」のように、月ごとの画像を表示
-    flyerImg.src = `flyer-${month}.jpg`;
+    // フォルダ名/画像ファイル名 の形式で指定
+    flyerImg.src = `食堂チラシ/flyer-${month}.png`;
     seasonName.innerText = `📢 ${month}月のあじさい食堂 案内`;
 }
 updateMonthlyFlyer();
