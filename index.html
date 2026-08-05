@@ -3,60 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>〇〇子ども食堂 | みんなの居場所</title>
+    <title>あじさい食堂 | 地域で作る家族団らんと世代間交流の場</title>
     <style>
-        /* デザインの設定 */
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fff9f0; }
-        header { background-color: #ff9800; color: white; padding: 2rem 1rem; text-align: center; }
-        nav { background: #fff; padding: 0.5rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav a { margin: 0 15px; text-decoration: none; color: #ff9800; font-weight: bold; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; }
-        h2 { border-left: 5px solid #ff9800; padding-left: 10px; color: #e68a00; }
-        .info-box { background: #fff3e0; padding: 15px; border-radius: 8px; border: 1px dashed #ff9800; }
-        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #777; }
-        .btn { display: inline-block; background: #ff9800; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
-        img { max-width: 100%; height: auto; border-radius: 10px; }
+        /* 基本設定 */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+        }
+        /* ヘッダー */
+        header {
+            background-color: #6b4d9a; /* あじさいをイメージしたパープルカラー */
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        /* ナビゲーション */
+        nav {
+            background: #ffffff;
+            padding: 0.8rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            z-index: 100;
+        }
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #6b4d9a;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        /* コンテナ */
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        /* セクションスタイル */
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        h2 {
+            border-left: 6px solid #6b4d9a;
+            padding-left: 12px;
+            color: #4a3271;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .philosophy-text {
+            background: #f7f4fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.98rem;
+            white-space: pre-line; /* 改行をそのまま反映 */
+        }
+        .info-box {
+            background: #fff8eb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #e69c24;
+        }
+        .info-item {
+            margin-bottom: 12px;
+        }
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        /* ボタン */
+        .btn {
+            display: inline-block;
+            background: #6b4d9a;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #53397d;
+        }
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #666;
+            background: #eae5f0;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>〇〇子ども食堂</h1>
-    <p>〜みんなで食べると、もっとおいしい！〜</p>
+    <h1>あじさい食堂</h1>
+    <p>〜大家族のような団らんと、温かい心の交流を〜</p>
 </header>
 
 <nav>
-    <a href="#about">紹介</a>
-    <a href="#schedule">開催日</a>
+    <a href="#philosophy">理念・思い</a>
+    <a href="#schedule">開催案内</a>
     <a href="#contact">お問い合わせ</a>
 </nav>
 
 <div class="container">
-    <section id="about">
-        <h2>子ども食堂について</h2>
-        <p>私たちは、地域の子どもたちや保護者の方が、安心して楽しく食事をできる場所を作っています。どなたでもお気軽にお越しください！</p>
-        </section>
 
-    <section id="schedule">
-        <h2>次回の開催予定</h2>
-        <div class="info-box">
-            <p><strong>📅 日時：</strong> 202X年〇月〇日（土） 12:00〜14:00</p>
-            <p><strong>📍 場所：</strong> 〇〇公民館 1階キッチン</p>
-            <p><strong>💰 料金：</strong> 子ども：無料 / 大人：300円</p>
-            <p><strong>🍲 メニュー：</strong> 特製カレーライス、季節のサラダ</p>
+    <!-- 理念・考え -->
+    <section id="philosophy">
+        <h2>あじさい食堂の理念と思い</h2>
+        <div class="philosophy-text">
+現代社会では物が中心となり、子供たちの遊びはゲームの中での空想世界が占めるようになってきています。戦後の核家族政策により人間・家族関係は欠如し、思いやりの心や感謝の心が失われつつあります。
+
+あじさい食堂では、色んな方々と団らんの時間を過ごし、子供達には年配者の言動から温かい心や思いやりの心に触れ、感謝や尊敬の心、常識を自然と育めるように見守ります。また、ご高齢の皆様には元気な子供達と触れ合う事により心身ともに元気になり、笑顔で楽しい時間を過ごして頂きたいと考えております。
+
+食べ物に対するありがたさや感謝の心を培い、前向きな心・忍耐力・不動の心を持った強い子供たちの育成と、地域の繋がり・活性化に貢献してまいります。
         </div>
     </section>
 
-    <section id="contact">
-        <h2>お問い合わせ・お申し込み</h2>
-        <p>参加のご予約や、ボランティア・寄付のお申し出はこちらまでお願いします。</p>
-        <p>📞 電話： 00-0000-0000（担当：〇〇）</p>
-        <a href="mailto:example@mail.com" class="btn">メールを送る</a>
+    <!-- 開催案内 -->
+    <section id="schedule">
+        <h2>次回の開催予定</h2>
+        <div class="info-box">
+            <div class="info-item"><strong>📅 日時：</strong> 次回開催日が入ります（例：毎月第〇土曜日 12:00〜）</div>
+            <div class="info-item"><strong>📍 場所：</strong> 開催場所の住所や施設名</div>
+            <div class="info-item"><strong>💰 参加費：</strong> 子ども：無料 / 大人：〇〇円</div>
+            <div class="info-item"><strong>🍲 対象：</strong> 地域のお子様、ご高齢の方、保護者の皆様</div>
+        </div>
     </section>
+
+    <!-- お問い合わせ・ご支援 -->
+    <section id="contact">
+        <h2>ご参加・ご支援・お問い合わせ</h2>
+        <p>あじさい食堂へのご参加予約、ボランティアのご参加、食材のご寄付などに関するお問い合わせは、下記よりお気軽にご連絡ください。</p>
+        <p>日本の宝である子どもたちの未来のために、皆様のご賛同・ご協力を心よりお願い申し上げます。</p>
+        <a href="mailto:your-email@example.com" class="btn">メールでお問い合わせ</a>
+    </section>
+
 </div>
 
 <footer>
-    &copy; 2024 〇〇子ども食堂 All Rights Reserved.
+    &copy; あじさい食堂 All Rights Reserved.
 </footer>
 
 </body>
