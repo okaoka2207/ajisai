@@ -15,349 +15,296 @@
     <meta property="og:type" content="website">
 
     <style>
-        /* 基本設定 */
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #fcf8f2;
-        }
-        /* ヘッダー */
-        header {
-            background-color: #6b4d9a;
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            letter-spacing: 2px;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-        /* ナビゲーション */
-        nav {
-            background: #ffffff;
-            padding: 0.8rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-            z-index: 100;
-        }
-        nav a {
-            margin: 0 6px;
-            text-decoration: none;
-            color: #6b4d9a;
-            font-weight: bold;
-            font-size: 0.85rem;
-            display: inline-block;
-        }
-        /* コンテナ */
-        .container {
-            max-width: 850px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        /* セクション */
-        section {
-            background: white;
-            padding: 25px 20px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-        h2 {
-            border-left: 6px solid #6b4d9a;
-            padding-left: 12px;
-            color: #4a3271;
-            font-size: 1.35rem;
-            margin-top: 0;
-        }
-        .philosophy-text {
-            background: #f7f4fa;
-            padding: 18px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            white-space: pre-line;
-        }
-        /* 案内ボックス */
-        .info-box {
-            background: #fff8eb;
-            padding: 18px;
-            border-radius: 8px;
-            border: 1px dashed #e69c24;
-            margin-bottom: 15px;
-        }
-        .info-box.clean {
-            background: #e8f5e9;
-            border-color: #4caf50;
-        }
-        .info-box.bujutsu {
-            background: #e3f2fd;
-            border-color: #2196f3;
-        }
-        .info-item {
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-        .next-date {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 1.15rem;
-        }
-        .price-list {
-            background: #ffffff;
-            padding: 12px;
-            border-radius: 6px;
-            margin: 8px 0;
-            border: 1px solid #ffe0b2;
-        }
-        .notice {
-            color: #00838f;
-            font-weight: bold;
-            background: #e0f7fa;
-            padding: 10px;
-            border-radius: 6px;
-            margin-top: 12px;
-            font-size: 0.9rem;
-        }
-        /* チラシ表示エリア */
-        .flyer-container {
-            text-align: center;
-            margin: 15px 0 25px 0;
-        }
-        .flyer-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        /* マップ */
-        .map-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        /* ボタン */
-        .btn {
-            display: inline-block;
-            background: #6b4d9a;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .sponsor-box {
-            background: #f5f5f5;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 20px;
-        }
-        /* フッター */
-        footer {
-            text-align: center;
-            padding: 25px 10px;
-            font-size: 0.8rem;
-            color: #666;
-            background: #eae5f0;
-        }
-    </style>
+    /* 全体設定 */
+    :root {
+      --primary-color: #5b7fff;
+      --primary-hover: #4062e0;
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --accent-color: #ff7e67;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* ヘッダー */
+    header {
+      background: linear-gradient(135deg, #5b7fff, #819eff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    /* コンテナ：PC画面の幅を1100pxに広げて左右の無駄な余白をカット */
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* レイアウト：スマホは1列、PC（768px以上）は2列 */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-layout {
+        grid-template-columns: 1fr 1fr; /* PCでは左右2列で広々表示 */
+      }
+    }
+
+    /* カードスタイル */
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      color: var(--primary-color);
+      border-left: 5px solid var(--primary-color);
+      padding-left: 10px;
+      margin-bottom: 16px;
+    }
+
+    /* チラシ画像 */
+    .flyer-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* 次回開催日ハイライト枠 */
+    .next-event-box {
+      background-color: #fff3f0;
+      border: 2px dashed var(--accent-color);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .next-event-title {
+      font-size: 0.95rem;
+      color: #d9534f;
+      font-weight: bold;
+    }
+
+    .next-event-date {
+      font-size: 1.6rem;
+      color: #333;
+      font-weight: bold;
+      margin: 6px 0;
+    }
+
+    /* 電話ボタン */
+    .btn-call {
+      display: inline-block;
+      width: 100%;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-call:hover {
+      background-color: var(--primary-hover);
+    }
+
+    /* 店舗情報テーブル */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-table th, .info-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    .info-table th {
+      width: 30%;
+      color: #666;
+      font-weight: normal;
+    }
+
+    /* マップ埋め込み */
+    .map-container {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <header>
     <h1>あじさい食堂</h1>
-    <p>〜大家族のような団らんと、温かい心の交流を〜</p>
-</header>
+    <p>地域のみなさんとつくる、あたたかい居場所</p>
+  </header>
 
-<nav>
-    <a href="#philosophy">理念・思い</a>
-    <a href="#schedule">あじさい食堂</a>
-    <a href="#clean">クリーン大作戦</a>
-    <a href="#bujutsu">武術・整体</a>
-    <a href="#access">アクセス</a>
-</nav>
+  <div class="container">
+    <div class="grid-layout">
 
-<div class="container">
-
-    <!-- 1. 理念・考え -->
-    <section id="philosophy">
-        <h2>あじさい食堂の理念と思い</h2>
-        <div class="philosophy-text">
-現代社会では物が中心となり、子供たちの遊びはゲームの中での空想世界が占めるようになってきています。戦後の核家族政策により人間・家族関係は欠如し、思いやりの心や感謝の心が失われつつあります。
-
-あじさい食堂では、色んな方々と団らんの時間を過ごし、子供達には年配者の言動から温かい心や思いやりの心に触れ、感謝や尊敬の心、常識を自然と育めるように見守ります。また、ご高齢の皆様には元気な子供達と触れ合う事により心身ともに元気になり、笑顔で楽しい時間を過ごして頂きたいと考えております。
-
-食べ物に対するありがたさや感謝の心を培い、前向きな心・忍耐力・不動の心を持った強い子供たちの育成と、地域の繋がり・活性化に貢献してまいります。
-        </div>
-    </section>
-
-    <!-- 2. 子ども食堂 -->
-    <section id="schedule">
-        <h2>🍲 あじさい食堂（次回開催）</h2>
-        
-        <!-- 毎月自動切り替えのチラシ -->
-        <div class="flyer-container">
-            <img id="seasonal-flyer" src="" alt="今月の案内チラシ" class="flyer-img">
-            <p style="font-size:0.85rem; color:#666; margin-top:5px;" id="season-name"></p>
+      <!-- 左側エリア（PC）：次回開催日 ＆ 今月のチラシ -->
+      <div>
+        <div class="card">
+          <h2>次回開催のご案内</h2>
+          <div class="next-event-box">
+            <div class="next-event-title">★ 次回のあじさい食堂 ★</div>
+            <div class="next-event-date" id="nextSunday">日付計算中...</div>
+            <p>毎月 第4日曜日 開催</p>
+          </div>
         </div>
 
-        <div class="info-box">
-            <div class="info-item">
-                <strong>📅 次回の開催日：</strong><br>
-                <span class="next-date" id="next-sunday">計算中...</span>（毎月第4日曜日）
-            </div>
-            
-            <div class="info-item">
-                <strong>🍱 メニュー・料金：</strong>
-                <div class="price-list">
-                    ・熱アツカレー： <strong>400円</strong><br>
-                    ・最高味噌汁セット： <strong>300円</strong><br>
-                    ・子供肩もみ（10分）： <strong>100円</strong>
-                </div>
-            </div>
-
-            <div class="notice">
-                ※ごみゼロ運動推進の為、お持ち帰り容器（鍋・タッパ等）を持参下さい※
-            </div>
+        <div class="card">
+          <h2>今月のチラシ</h2>
+          <img id="flyerImage" class="flyer-img" src="食堂チラシ/flyer-8.jpg" alt="あじさい食堂 チラシ" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x800?text=%E3%83%81%E3%83%A9%E3%82%B7%E6%BA%96%E2%85%87%E4%B8%AD';">
         </div>
-    </section>
+      </div>
 
-    <!-- 3. ローカルクリーン大作戦 -->
-    <section id="clean">
-        <h2>🧹 ローカルクリーン大作戦（ゴミ拾い活動）</h2>
-        <p>秋晴れ（または季節の青空）の下、みんなで運拾い！心も街もスッキリしましょう！！</p>
-        <div class="info-box clean">
-            <div class="info-item"><strong>主催：</strong> あじさい食堂</div>
-            <div class="info-item"><strong>時間：</strong> 7:30〜11:00（※小雨の時は延期）</div>
-            <div class="info-item"><strong>集合場所：</strong> 8町内公民館前</div>
+      <!-- 右側エリア（PC）：概要・アクセス・お問い合わせ -->
+      <div>
+        <div class="card">
+          <h2>食堂概要・アクセス</h2>
+          <table class="info-table">
+            <tr>
+              <th>会場名</th>
+              <td>あじさい食堂</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>熊本県熊本市東区若葉1丁目7-6</td>
+            </tr>
+            <tr>
+              <th>開催日時</th>
+              <td>毎月第4日曜日</td>
+            </tr>
+            <tr>
+              <th>scm/有志</th>
+              <td>scm / 有志のみなさま</td>
+            </tr>
+          </table>
+
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E6%9D%B1%E5%8C%BA%E1%82%B5%E8%91%891%E4%B8%81%E7%9B%AE7-6&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div>
         </div>
-    </section>
 
-    <!-- 4. 武術体験・護身術・整体 -->
-    <section id="bujutsu">
-        <h2>🥋 武術体験講座・護身術・整体メンテナンス</h2>
-        <p><strong>〜自分を守る「技」と、自分をいたわる「術」〜</strong><br>
-        力より、理で動く。痛めるのではなく、整えながら強くなる。「自分を鍛えること」と「自分をいたわること」。その二つは矛盾しません。子どもから大人・高齢者の方まで安心してご参加いただけます。</p>
-        
-        <div class="info-box bujutsu">
-            <div class="info-item"><strong>主催：</strong> 武術点穴氣功教室（九州隆聖館 遊技門）</div>
-            <div class="info-item"><strong>日時：</strong> 18:30〜20:00（不定期水曜日・月2回）</div>
-            <div class="info-item"><strong>会場：</strong> 若葉コミュニティセンター（熊本市東区若葉4丁目23-23）</div>
-            <div class="info-item">
-                <strong>費用：</strong> 
-                <div class="price-list">
-                    ・武術体験講座（90分）： <strong>1,500円 / 回</strong><br>
-                    ・整体メンテナンス： <strong>1,500円 / 15分（1回）</strong>
-                </div>
-            </div>
-            <p style="font-size:0.85rem; color:#555; margin-bottom:0;">※肩こり・腰痛・足腰の健康促進・自己肯定感の向上・心と体の育成を目指します。</p>
+        <div class="card">
+          <h2>お問い合わせ</h2>
+          <p style="margin-bottom: 15px;">ご質問やボランティアのお問い合わせはお電話にて承っております。</p>
+          <a href="tel:090-6637-1358" class="btn-call">📞 090-6637-1358 に電話する</a>
         </div>
-    </section>
+      </div>
 
-    <!-- 5. 場所・マップ -->
-    <section id="access">
-        <h2>開催場所・アクセス（あじさい食堂）</h2>
-        <p><strong>📍 住所：</strong> 〒862-0903 熊本県熊本市東区若葉1丁目7-6（食パン家向い）</p>
-        
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.66110468049843!2d130.75979767410084!3d32.77693891967736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f367edcd9bb3%3A0xab8530a34cca8a4c!2z6Jit!5e0!3m2!1sja!2sjp!4v1785942268754!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- 6. お問い合わせ・協賛 -->
-    <section id="contact">
-        <h2>お問い合わせ・ご協賛</h2>
-        <p>あじさい食堂、ゴミ拾い活動、武術教室へのお問い合わせはお電話にて受け付けております。</p>
-        
-        <p><strong>📞 担当：</strong> 岡村 泰治<br>
-        <strong>TEL：</strong> <a href="tel:09066371358" style="color:#6b4d9a; font-weight:bold;">090-6637-1358</a><br>
-        <span style="font-size:0.8rem; color:#666;">（受付時間 10:00〜19:30 ／ 迷惑電話防止のため留守電に一言メッセージをお願いします。折り返しお電話いたします）</span></p>
+  <footer>
+    <p>&copy; あじさい食堂 All Rights Reserved.</p>
+  </footer>
 
-        <a href="tel:09066371358" class="btn">電話をかける</a>
-
-        <div class="sponsor-box">
-            <strong>【 協賛 】</strong><br>
-            scm / 有志 ／ 上地流空手道連盟
-        </div>
-    </section>
-
-</div>
-
-<footer>
-    &copy; あじさい食堂 All Rights Reserved.
-</footer>
-
-<!-- JavaScriptプログラム -->
-<script>
-// 1. 毎月第4日曜日を自動計算
-function getNext4thSunday() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    let year = today.getFullYear();
-    let month = today.getMonth();
-
-    for (let i = 0; i < 12; i++) {
-        let targetMonth = month + i;
-        let targetYear = year + Math.floor(targetMonth / 12);
-        targetMonth = targetMonth % 12;
-
-        let sundayCount = 0;
-        for (let day = 1; day <= 31; day++) {
-            let date = new Date(targetYear, targetMonth, day);
-            if (date.getMonth() !== targetMonth) break;
-            
-            if (date.getDay() === 0) {
-                sundayCount++;
-                if (sundayCount === 4) {
-                    if (date >= today) {
-                        return `${targetYear}年${targetMonth + 1}月${day}日（日）`;
-                    }
-                }
-            }
-        }
+  <script>
+    // 今月の月数に応じたチラシ画像の自動読み込み
+    const now = new Date();
+    const currentMonth = now.getMonth() + 1;
+    const flyerImg = document.getElementById('flyerImage');
+    if (flyerImg) {
+      flyerImg.src = `食堂チラシ/flyer-${currentMonth}.jpg`;
     }
-}
-document.getElementById('next-sunday').innerText = getNext4thSunday();
 
-// 2. 「食堂チラシ」フォルダ内の画像を毎月自動切り替え
-function updateMonthlyFlyer() {
-    const month = new Date().getMonth() + 1; // 今の月（1〜12）を取得
-    const flyerImg = document.getElementById('seasonal-flyer');
-    const seasonName = document.getElementById('season-name');
+    // 次の第4日曜日を自動計算して表示するプログラム
+    function getFourthSunday() {
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      let date = new Date(year, month, 1);
+      let sundayCount = 0;
+      
+      while (date.getMonth() === month) {
+        if (date.getDay() === 0) {
+          sundayCount++;
+          if (sundayCount === 4) {
+            if (date < now && date.getDate() !== now.getDate()) {
+              return getFourthSundayNextMonth(year, month + 1);
+            }
+            return date;
+          }
+        }
+        date.setDate(date.getDate() + 1);
+      }
+      return getFourthSundayNextMonth(year, month + 1);
+    }
 
-    // 食堂チラシ フォルダ内の flyer-1.jpg〜flyer-12.jpg を読み込む
-    flyerImg.src = `食堂チラシ/flyer-${month}.png`;
-    seasonName.innerText = `📢 ${month}月のあじさい食堂 案内`;
-}
-updateMonthlyFlyer();
-</script>
+    function getFourthSundayNextMonth(year, month) {
+      let date = new Date(year, month, 1);
+      let sundayCount = 0;
+      while (true) {
+        if (date.getDay() === 0) {
+          sundayCount++;
+          if (sundayCount === 4) return date;
+        }
+        date.setDate(date.getDate() + 1);
+      }
+    }
 
+    const nextSunday = getFourthSunday();
+    document.getElementById('nextSunday').innerText = `${nextSunday.getMonth() + 1}月${nextSunday.getDate()}日(日)`;
+  </script>
 </body>
 </html>
