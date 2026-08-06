@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -31,6 +32,7 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  .nowrap{white-space:nowrap;}
   body{
     margin:0;
     background:var(--bg);
@@ -97,12 +99,20 @@
     .nav-toggle{display:block;}
   }
 
-  /* ---------- page sections ---------- */
+  @media (max-width:420px){
+    .nav-inner{padding:12px 16px;}
+    .brand{font-size:.88rem;gap:7px;}
+    .brand-mark{width:24px;height:24px;}
+    .hero h1{font-size:1.85rem;}
+  }
+
   .page{display:none;}
   .page.active{display:block;}
   section{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-  /* ---------- hero ---------- */
+  br.lb-pc{display:inline;}
+  @media (max-width:640px){ br.lb-pc{display:none;} }
+
   .hero{
     position:relative;overflow:hidden;
     padding-top:64px;padding-bottom:56px;
@@ -143,6 +153,15 @@
 
   .hero-bloom{position:relative;aspect-ratio:1/1;}
   .hero-bloom svg{width:100%;height:100%;}
+
+  @media (max-width:860px){
+    .hero{padding-top:40px;padding-bottom:36px;}
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .hero-bloom{order:-1;max-width:220px;margin:0 auto;}
+    .hero-lead{max-width:none;}
+    .hero-meta{gap:10px;}
+    .meta-pill{min-width:0;flex:1 1 130px;padding:12px 14px;}
+  }
 
   /* ---------- philosophy ---------- */
   .philosophy{padding:70px 24px;}
@@ -238,6 +257,8 @@
   .info-card .k{font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;}
   .info-card .v{font-family:var(--serif);font-size:1.25rem;color:var(--night-deep);margin-top:6px;}
   @media (max-width:860px){.info-grid{grid-template-columns:1fr;}}
+  .info-grid-2{grid-template-columns:1fr 1fr;}
+  @media (max-width:640px){.info-grid-2{grid-template-columns:1fr;}}
 
   .content-block{max-width:1080px;margin:0 auto;padding:40px 24px;}
   .content-block h2{font-size:1.5rem;color:var(--night-deep);margin-bottom:18px;}
@@ -284,6 +305,22 @@
     font-size:.78rem;color:#8B89A3;
   }
   @media (max-width:860px){.footer-inner{grid-template-columns:1fr;}}
+
+  @media (max-width:640px){
+    .philosophy{padding:44px 20px;}
+    .philosophy-inner{padding:36px 22px;border-radius:24px;}
+    .philosophy h2{font-size:1.35rem;}
+    .activities{padding:44px 20px;}
+    .section-head h2{font-size:1.5rem;}
+    .flyer-section{padding:10px 20px 48px;}
+    .sub-hero{padding:40px 20px 28px;}
+    .content-block{padding:28px 20px;}
+    section{padding:0 20px;}
+    .a-card{padding:24px 20px;}
+    .footer-inner{gap:26px;}
+    footer{padding:44px 20px 24px;}
+    .sponsors{margin-top:26px;padding:16px 18px;}
+  }
 
   .sponsors{
     max-width:1080px;margin:36px auto 0;
@@ -341,7 +378,7 @@
     <div class="hero-grid">
       <div>
         <p class="eyebrow"><span class="petal-mark"></span>熊本市東区若葉から、一家だんらんのはじまり</p>
-        <h1>あじさいの花のように、<br>色とりどりの人が集まる食卓。</h1>
+        <h1>あじさいの花のように、<br class="lb-pc">色とりどりの人が集まる食卓。</h1>
         <p class="hero-lead">あじさいの花言葉は「一家だんらん」。ひとつひとつの小さな花が寄り添って、大きなまるい花になるように。子どもも、お父さんお母さんも、おじいちゃんおばあちゃんも、みんなで囲む食卓を熊本市東区若葉でひらいています。</p>
         <div class="hero-meta">
           <div class="meta-pill">
@@ -350,7 +387,7 @@
           </div>
           <div class="meta-pill">
             <div class="k">時間</div>
-            <div class="v">10:30〜17:00</div>
+            <div class="v"><span class="nowrap">10:30〜17:00</span></div>
           </div>
           <div class="meta-pill">
             <div class="k">対象</div>
@@ -371,7 +408,7 @@
       <p class="eyebrow" style="color:#F1D9EA;"><span class="petal-mark"></span>私たちの想い</p>
       <h2>失われつつある「団らん」を、もう一度この街に。</h2>
       <p>ものやゲームの中の世界が中心になり、家族や地域で顔を合わせて食事をする時間が少しずつ減ってきています。子どもたちは年長者の立ち居振る舞いから思いやりや感謝の心を、お年寄りは子どもたちの元気から笑顔を受け取る。あじさい食堂は、そんな世代を超えた団らんの時間をつくる場所でありたいと考えています。</p>
-      <p class="philosophy-quote">あじさいの花は、たくさんの小さな花が寄り添って一つの大きな花になります。<br>色も少しずつ違う。それでいいのだと、この花が教えてくれます。</p>
+      <p class="philosophy-quote">あじさいの花は、たくさんの小さな花が寄り添って一つの大きな花になります。<br class="lb-pc">色も少しずつ違う。それでいいのだと、この花が教えてくれます。</p>
       <details class="full-text">
         <summary>私たちの理念を詳しく読む</summary>
         <p>現代社会では物が中心となり、子どもたちの遊びはゲームの中の空想世界が占めるようになってきました。核家族化が進むなかで、思いやりの心や感謝の心が失われつつあり、家族の団らんの時間、地域での交流も少なくなっています。子どもたちの常識の欠如や心のいじめ、対人アレルギー、高齢者の孤独や社会的な孤立が、今の大きな課題だと私たちは考えています。学習の機会や情報が足りないご家庭、特別な事情を抱えるご家庭を支えることも、これからの課題です。</p>
@@ -383,7 +420,7 @@
   <section class="activities reveal">
     <div class="section-head">
       <p class="eyebrow"><span class="petal-mark"></span>3つの活動</p>
-      <h2>食べる、拾う、守る。<br>それぞれの形で地域とつながる。</h2>
+      <h2>食べる、拾う、守る。<br class="lb-pc">それぞれの形で地域とつながる。</h2>
     </div>
     <div class="card-grid">
       <div class="a-card">
@@ -427,9 +464,9 @@
     <p>あじさいの花言葉「一家だんらん」にちなんで名づけました。子どもだけでなく、お父さんお母さん、おじいさんおばあさん、みんなで団らんできる食堂であり、みんなにとって大切な場所になるようにしたいと考えています。</p>
   </div>
 
-  <div class="info-grid" style="grid-template-columns:1fr 1fr;">
+  <div class="info-grid info-grid-2">
     <div class="info-card"><div class="k">開催日</div><div class="v" id="nextDateShokudo">毎月第4日曜日</div></div>
-    <div class="info-card"><div class="k">時間</div><div class="v">10:30〜17:00</div></div>
+    <div class="info-card"><div class="k">時間</div><div class="v"><span class="nowrap">10:30〜17:00</span></div></div>
   </div>
 
   <div class="content-block">
@@ -489,7 +526,7 @@
   </div>
 
   <div class="info-grid">
-    <div class="info-card"><div class="k">日時</div><div class="v">不定期水曜日 18:30〜20:00</div></div>
+    <div class="info-card"><div class="k">日時</div><div class="v">不定期水曜日<br class="lb-pc"> <span class="nowrap">18:30〜20:00</span></div></div>
     <div class="info-card"><div class="k">会場</div><div class="v">若葉コミュニティセンター</div></div>
     <div class="info-card"><div class="k">費用</div><div class="v">1,500円／回</div></div>
   </div>
@@ -554,8 +591,8 @@
     <p>ご不明な点、参加のご相談などは、お電話でお気軽にお問い合わせください。</p>
   </div>
 
-  <div class="info-grid" style="grid-template-columns:1fr 1fr;">
-    <div class="info-card"><div class="k">お問い合わせ</div><div class="v">090-6637-1358（岡村）</div></div>
+  <div class="info-grid info-grid-2">
+    <div class="info-card"><div class="k">お問い合わせ</div><div class="v"><span class="nowrap">090-6637-1358</span>（岡村）</div></div>
     <div class="info-card"><div class="k">所在地</div><div class="v">熊本県熊本市東区若葉1丁目7-6</div></div>
   </div>
 
@@ -599,7 +636,7 @@
     </div>
     <div>
       <h4>お問い合わせ</h4>
-      <p>090-6637-1358（岡村）</p>
+      <p><span class="nowrap">090-6637-1358</span>（岡村）</p>
     </div>
   </div>
 
